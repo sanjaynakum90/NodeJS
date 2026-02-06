@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student - Student Management</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>✏️ Edit Student</h1>
+
+        <form action="/edit/<%= student.id %>" method="POST">
+            <label for="name">Student Name</label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Enter updated name" 
+                required 
+                autofocus
+                minlength="1"
+                maxlength="100"
+                value="<%= student.name %>">
+            <button type="submit">Update Student</button>
+        </form>
+
+        <br>
+        <a href="/">⬅️ Back to List</a>
+    </div>
+</body>
+
+</html>
